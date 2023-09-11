@@ -114,8 +114,8 @@ rpm: $(PACKAGE_FILE)
 	cp "$<" ~/rpmbuild/SOURCES/
 	sed s/VERSION/$(VERSION)/ jumpapp.spec >~/rpmbuild/SPECS/jumpapp.spec
 	rpmbuild -ba ~/rpmbuild/SPECS/jumpapp.spec
-	mv ~/rpmbuild/RPMS/noarch/jumpapp-$(VERSION)-1.*.noarch.rpm .
-	mv ~/rpmbuild/SRPMS/jumpapp-$(VERSION)-1.*.src.rpm .
+	mv ~/rpmbuild/RPMS/noarch/jumpapp-$(VERSION)-1.noarch.rpm .
+	mv ~/rpmbuild/SRPMS/jumpapp-$(VERSION)-1.src.rpm .
 
 fedora-%:
 	vagrant up fedora
